@@ -1,0 +1,14 @@
+# Third Party Files
+node_modules
+**/src/lib
+
+
+# Build Artifact Files
+bin
+obj
+
+*.js
+*.lock.json
+*.js.map
+*.swp
+*.swo
