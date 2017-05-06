@@ -1,0 +1,32 @@
+body{
+    padding-top: 50px;
+}
+
+#Tabley{
+    padding: 30px;
+}
+
+th{
+    font-weight: normal;
+}
+.tT{
+    font-weight: bold;
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.rt{
+    width: 7%;
+    text-align: center;
+}
+.rt:hover{
+    background-color: #A9A9A9;
+}
+
+.rc{
+    width: 32%
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
