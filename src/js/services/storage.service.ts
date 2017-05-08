@@ -2,6 +2,7 @@ namespace application.services{
     export class storageService{
         public localStorageService;
 
+        
         static $inject = [
             'localStorageService'
         ]
@@ -10,12 +11,16 @@ namespace application.services{
             this.localStorageService = localStorageService;
         }
         
-        public saveToLocal(scores: number[], comments: string[]){
+        public saveToLocal(answers: models.answer[]){
             let that = this;
-            for(var i=0; i<scores.length; i++){
-                that.localStorageService.set(`question${i}score`, scores[i])
-                that.localStorageService.set(`question${i}comment`, comments[i])
-            }
+            that.localStorageService.set(`answers`,JSON.stringify(answers));
+        }
+
+        public pullLocal(): models.answer[]{
+            let c: models.answer[] = [];
+            c = JSON.parse(this.localStorageService.get("answers"));
+            console.log(c)
+            return c;
         }
     }
 }

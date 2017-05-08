@@ -6,22 +6,22 @@ namespace application.controllers{
             "Do you believe in the existence of extraterrestrial beings?"
         ];
         public title: string = "A metaphysical query";
-        public scores: number[] = [0,0,0]
-        public comments: string[] = ["","",""];
-        public storageService: services.storageService;
+        public answers: models.answer[]= [];
 
         static $inject = ["storageService"]
 
-        constructor(storageService: services.storageService){
+        constructor(public storageService: services.storageService){
             this.storageService = storageService;
+            this.answers = this.storageService.pullLocal();
+            console.log(this.answers);
         }
         
         public saveData(){
-            this.storageService.saveToLocal(this.scores, this.comments);
+            this.storageService.saveToLocal(this.answers);
         }
 
         public getScore(score: number, questionId: number){
-            if(this.scores[questionId] == score){
+            if(this.answers[questionId].score == score){
                 return true;
             }
             else{ 
@@ -30,8 +30,7 @@ namespace application.controllers{
         }    
 
         public setScore(score: number, questionId: number){
-            this.scores[questionId] = score;
-            console.log(`set question ${questionId} to ${score}`)
+            this.answers[questionId].score = score;
         }
     }
 }       

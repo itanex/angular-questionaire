@@ -8,6 +8,7 @@ bin
 obj
 
 *.js
+*.swl
 *.lock.json
 *.js.map
 *.swp
