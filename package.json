@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "tsc:w": "tsc -w",
-      "lite": "lite-server",
-      "start": "concurrently \"npm run tsc:w\" \"npm run lite\""
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\""
   },
-  "author": "",
-  "license": "ISC",
+  "author": "james <jamesolof@startpage.com>",
+  "contributors": [
+    "james <jamesolof@startpage.com>"
+  ],
+  "maintainers": [
+    "Bryan Wood <whenidev@gmail.com>"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@types/angular": "^1.6.17",
     "concurrently": "^3.4.0",

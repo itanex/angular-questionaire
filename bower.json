@@ -1,12 +1,10 @@
 {
   "name": "questionaireApp",
   "authors": [
+    "Bryan Wood <whenidev@gmail.com>",
     "james <jamesolof@startpage.com>"
   ],
-  "description": "",
-  "main": "",
   "license": "MIT",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
