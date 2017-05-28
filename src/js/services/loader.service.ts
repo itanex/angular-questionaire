@@ -2,11 +2,11 @@ namespace application.services{
     export class loaderService{
 
 
-        static $inject = [
-            '$http'
-        ];
+        // static $inject = [
+        //     '$http'
+        // ];
 
-        constructor(private $http: ng.IHttpService){
-        }
+        // constructor(private $http: ng.IHttpService){
+        // }
     }
 }
